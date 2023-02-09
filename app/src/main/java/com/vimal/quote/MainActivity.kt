@@ -74,6 +74,13 @@ class MainActivity : AppCompatActivity(), ItemClickListener {
             }
         })
         viewModel.getAllQuotes()
+
+        val sum1 = { a: Int, b: Int -> a + b }
+        val result1 = sum1(7, 3)
+        Toast.makeText(
+            this@MainActivity, "The sum of two numbers is: $result1",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 
     override fun onItemClick(quote: Quote) {
