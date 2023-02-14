@@ -5,8 +5,9 @@ package com.vimal.quote.api
  */
 
 import com.vimal.quote.model.Quote
+import javax.inject.Inject
 
-class MainRepository constructor(private val retrofitService: RetrofitService) {
+class MainRepository @Inject constructor(private val retrofitService: RetrofitService) {
 
     suspend fun getAllQuotes(): NetworkState<List<Quote>> {
         val response = retrofitService.getAllQuotes()
