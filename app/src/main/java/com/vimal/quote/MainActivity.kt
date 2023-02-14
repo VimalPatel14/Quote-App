@@ -20,11 +20,13 @@ import com.vimal.quote.interfaces.ItemClickListener
 import com.vimal.quote.model.Quote
 import com.vimal.quote.viewmodel.MainViewModel
 import com.vimal.quote.viewmodel.MyViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), ItemClickListener {
 
     private lateinit var binding: ActivityMainBinding
